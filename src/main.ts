@@ -26,3 +26,31 @@ if (isAdmin) {
 } else {
     console.log("isAdmin is false");
 }
+
+//bonus
+function makeChristmasTree(n : number) : void {
+    let tree : string = "";
+    for (let i :number = 0; i <= n-1; i++) {
+        for (let j : number = 0; j < n-i; j ++) {
+            tree += " ";
+        }
+        if (i === 0) {
+            tree += "*\n";
+        } else {
+            for (let j : number = 0; j < 2*i+1; j++) {
+                tree += "*"
+            }
+            tree += "\n"
+        }
+
+    }
+    for (let i = 0; i <= n-1; i++) {
+        for (let j : number = 0; j < n-1/2; j ++) {
+            tree += " ";
+        }
+        tree += "*\n"
+    }
+    console.log(tree)
+}
+
+makeChristmasTree(5);
